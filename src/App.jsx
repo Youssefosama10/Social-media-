@@ -9,7 +9,7 @@ import Layout from './components/Layout'
 import AuthContextProvider from './context/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import Profile from './components/profile'
+
 import PostDetails from './components/PostDetails'
 
 const router = createBrowserRouter([
@@ -17,7 +17,6 @@ const router = createBrowserRouter([
   { path: 'login', element: <Login /> },
   { path: '', element: <Layout /> , children : [  { path: '', element: <Register /> },
     { path: 'Home', element: <ProtectedRoute> <Home /> </ProtectedRoute> }, 
-    { path: 'Profile', element: <ProtectedRoute> <Profile /> </ProtectedRoute> } ,
     { path: 'PostDetails/:id', element: <ProtectedRoute> <PostDetails /> </ProtectedRoute> } ,
   ] },
 ])

@@ -117,9 +117,6 @@ const menuItems = isUserLoggedIn ? [
             />
           </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat">
-            <DropdownItem key="settings">
-              <Link className="block" to='/Profile'>Profile</Link>
-            </DropdownItem>
     
             <DropdownItem key="logout" color="danger" onClick={handleLogout}>
               Log Out
